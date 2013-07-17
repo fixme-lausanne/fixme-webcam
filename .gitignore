@@ -1,3 +1,19 @@
+## Vim
+#############################
+
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+## PyCharm
+#############################
+.idea
+
+## Python
+#############################
+
 *.py[cod]
 
 # C extensions
@@ -17,6 +33,7 @@ develop-eggs
 .installed.cfg
 lib
 lib64
+__pycache__
 
 # Installer logs
 pip-log.txt
@@ -33,3 +50,8 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+
+## Custom
+#############################
+snapshots/+.*
