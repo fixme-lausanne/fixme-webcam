@@ -10,3 +10,7 @@ $.ajax({
         console.log("Webcam is available! :)");
     }
 });
+
+function imgError(img){
+    img.src = '/img/webcam-off.png';
+}
