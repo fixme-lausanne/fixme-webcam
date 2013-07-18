@@ -1,7 +1,6 @@
 fixme-webcam
 ============
-
-- A project to show the webcam filming the Fixme 3D printer.
+- A project to show the webcam filming the [FIXME 3D printer](https://fixme.ch/wiki/Ultimaker).
 
 Site
 ----
@@ -10,4 +9,4 @@ Site
     - js : javascript library or element needed by them, script used directly in the html.
     - img : images used in the template.
     - css : stylesheets used in the template.
-- To launch a devloppement version, simply execute the dev.sh script. This will launch a simple http server in the site directory on port 8000.
+- To launch a development version, simply execute the dev.sh script. This will launch a simple http server in the site directory on port 8000.
