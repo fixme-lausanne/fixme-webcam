@@ -13,7 +13,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-    background: #000;
+    background: #333;
 }
 
 ::-moz-selection {
@@ -82,6 +82,10 @@ body {
 /* ===================
     ALL: Orange Theme
    =================== */
+
+.main-container {
+    background: #000;
+}
 
 .header-container {
     border-bottom: 20px solid #009100; /*#e44d26;*/
