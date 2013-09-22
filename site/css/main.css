@@ -56,6 +56,7 @@ textarea {
     padding: 0.2em 0;
 }
 
+aside a,
 footer a {
     text-decoration: none;
     font-weight: bold;
@@ -427,4 +428,10 @@ nav a:hover {
 
 #webcam {
     max-width: 100%;
+}
+
+.thumb {
+    width: 160px;
+    height: 120px;
+    margin: 5px 5px 0 0;
 }
