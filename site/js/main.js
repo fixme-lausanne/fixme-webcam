@@ -1,15 +1,16 @@
-$.ajax({
-    url:'http://62.220.135.212/mjpg/video.mjpg',
-    type:'HEAD',
-    error: function()
-    {
-        console.log("Webcam is not available, sorry.");
-    },
-    success: function()
-    {
-        console.log("Webcam is available! :)");
-    }
-});
+function takeScreenshot() {
+    $.ajax({
+        url:'/screenshot.py',
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+            console.log(textStatus + ", " + errorThrown);
+        },
+        success: function(data, textStatus, jqXHR)
+        {
+            console.log("Took a screenshot: " + data);
+        }
+    });
+}
 
 function imgError(img){
     img.src = '/img/webcam-off.png';
