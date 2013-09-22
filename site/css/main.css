@@ -424,3 +424,7 @@ nav a:hover {
         page-break-after: avoid;
     }
 }
+
+#webcam {
+    max-width: 100%;
+}
