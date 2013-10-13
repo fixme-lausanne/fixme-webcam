@@ -70,6 +70,7 @@ function lastGallery() {
 }
 
 function fullScreenPicture(img, e){
+    img.stop(true, true);
     e.stopPropagation();
     img.unbind('click');
     $.each($('.fullscreen'), function(k, v){
@@ -96,6 +97,7 @@ function fullScreenPicture(img, e){
 }
 
 function reducePicture(img, e) {
+    img.stop(true, true);
     e.stopPropagation();
     img.unbind('click');
     $('body').unbind('click');
