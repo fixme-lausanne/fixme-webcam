@@ -80,6 +80,7 @@ function fullScreenPicture(img, e){
     $('body').click(function(e){
         reducePicture(img, e);
     });
+    img.unbind(e);
     img.click(function(e){
         reducePicture(img, e);
     });
@@ -97,6 +98,7 @@ function reducePicture(img, e) {
         margin: '5px 5px 0 0',
         top: 0, left: 0,
     });
+    img.unbind(e);
     img.click(function(e){
         fullScreenPicture(img, e);
     });
