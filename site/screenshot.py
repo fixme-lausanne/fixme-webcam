@@ -2,6 +2,7 @@
 
 import requests
 
+SAVE = './img/snap'
 URL = 'http://62.220.135.212/mjpg/video.mjpg'
 BOUND = '--myboundary' #FIXME Should be taken from HEADERS
 start = False
@@ -18,6 +19,6 @@ for line in r.iter_lines():
             start = True
 
 
-f = open('/tmp/image.jpg', 'w+')
+f = open('%s/image.jpg' % SAVE, 'w+')
 f.write(image)
 f.close()
