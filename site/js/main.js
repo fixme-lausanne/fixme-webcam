@@ -71,12 +71,14 @@ function lastGallery() {
 
 function fullScreenPicture(img, e){
     e.stopPropagation();
+    $.each($('.fullscreen'), function(k, v){
+        reducePicture($(v), e);
+    });
     img.css({
         position: 'absolute',
         'z-index': 9999,
     });
     img.animate({
-        width: '80%',
         height: '80%',
         margin: '9%',
         top: $(window).scrollTop(),
@@ -85,6 +87,7 @@ function fullScreenPicture(img, e){
     $('body').click(function(e){
         reducePicture(img, e);
     });
+    img.addClass('fullscreen');
     img.unbind(e);
     img.click(function(e){
         reducePicture(img, e);
@@ -103,6 +106,7 @@ function reducePicture(img, e) {
         margin: '5px 5px 0 0',
         top: 0, left: 0,
     });
+    img.removeClass('fullscreen');
     img.unbind(e);
     img.click(function(e){
         fullScreenPicture(img, e);
