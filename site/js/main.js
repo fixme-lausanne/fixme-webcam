@@ -71,45 +71,45 @@ function lastGallery() {
 
 function fullScreenPicture(img, e){
     e.stopPropagation();
+    img.unbind('click');
     $.each($('.fullscreen'), function(k, v){
         reducePicture($(v), e);
     });
+    img.addClass('fullscreen');
     img.css({
         position: 'absolute',
         'z-index': 9999,
     });
     img.animate({
+        'max-width': '6000px',
         height: '80%',
         margin: '9%',
         top: $(window).scrollTop(),
         left: $(window).scrollLeft(),
     });
-    $('body').click(function(e){
-        reducePicture(img, e);
+    $('body').click(function(ev){
+        reducePicture(img, ev);
     });
-    img.addClass('fullscreen');
-    img.unbind(e);
-    img.click(function(e){
-        reducePicture(img, e);
+    img.click(function(ev){
+        reducePicture(img, ev);
     });
 }
 
 function reducePicture(img, e) {
     e.stopPropagation();
+    img.unbind('click');
+    $('body').unbind('click');
+    img.removeClass('fullscreen');
     img.css({
         position: 'relative',
         'z-index': 1,
-    });
-    img.animate({
         width: '160px',
         height: '120px',
         margin: '5px 5px 0 0',
         top: 0, left: 0,
     });
-    img.removeClass('fullscreen');
-    img.unbind(e);
-    img.click(function(e){
-        fullScreenPicture(img, e);
+    img.click(function(ev){
+        fullScreenPicture(img, ev);
     });
 }
 

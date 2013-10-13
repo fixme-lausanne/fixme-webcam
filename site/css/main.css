@@ -438,5 +438,5 @@ nav a:hover {
 
 .fullscreen {
     border: 5px solid #009100;
-    width: auto;
+    width: auto!important;
 }
