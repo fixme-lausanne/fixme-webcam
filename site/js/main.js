@@ -57,6 +57,7 @@ function buildGallery() {
 function lastGallery() {
     var last = gallery.slice(0, 4);
     var res = $('#last-snap');
+    res.empty();
     $.each(last, function(key, value){
         var img = $('<img>');
         img.attr('src', value);
