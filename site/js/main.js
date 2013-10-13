@@ -32,6 +32,10 @@ function takeScreenshot() {
     });
 }
 
+function flash() {
+    $('body').fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+}
+
 function buildGallery() {
     var url = '/img/snap/';
     $.ajax({
