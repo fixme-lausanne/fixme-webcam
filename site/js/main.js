@@ -26,7 +26,7 @@ function takeScreenshot() {
         success: function(data, textStatus, jqXHR)
         {
             flash();
-            gallery.push(data);
+            buildGallery();
             lastGallery();
         }
     });
