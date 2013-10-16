@@ -14,3 +14,7 @@ r = requests.get(URL)
 f = open(SAVE, 'w+')
 f.write(r.content)
 f.close()
+
+print 'Content-Type: text/html'
+print ''
+print 'OK ' % len(r.content)
