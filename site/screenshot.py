@@ -4,21 +4,24 @@ import requests
 
 SAVE = './img/snap'
 URL = 'http://62.220.135.212/mjpg/video.mjpg'
-BOUND = '--myboundary' #FIXME Should be taken from HEADERS
 start = False
-image = bytes()
+image = []
 
+# Extract an image from the stream
 r = requests.get(URL, stream=True)
+bound = r.headers['content-type'][36:]
 for line in r.iter_lines():
     if line:
         if start == True:
-            image += line
-        if line == BOUND:
+            image.append(line)
+        if line == bound:
             if start == True:
                 break
             start = True
 
 
+# Clean and write image data
+res = ''.join(image[2:-1])
 f = open('%s/image.jpg' % SAVE, 'w+')
-f.write(image)
+f.write(res)
 f.close()
