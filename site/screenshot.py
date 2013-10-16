@@ -17,4 +17,4 @@ f.close()
 
 print 'Content-Type: text/html'
 print ''
-print 'OK ' % len(r.content)
+print 'OK %s' % len(r.content)
