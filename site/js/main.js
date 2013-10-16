@@ -47,7 +47,7 @@ function buildGallery() {
         },
         success: function(data, textStatus, jqXHR)
         {
-            $(data).find('a:contains(.png)').each(function(){
+            $(data).find('a:contains(.jpg)').each(function(){
                 gallery.push(url + $(this).attr('href'));
             });
         }
