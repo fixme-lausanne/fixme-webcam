@@ -37,6 +37,7 @@ function flash() {
 }
 
 function buildGallery() {
+    gallery = []
     var url = '/img/snap/';
     $.ajax({
         url: url,
