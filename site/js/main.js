@@ -38,9 +38,9 @@ function flash() {
 
 function buildGallery() {
     gallery = []
-    var url = '/img/snap/?C=M;O=D';
+    var url = '/img/snap/';
     $.ajax({
-        url: url,
+        url: url+'?C=M;O=D',
         async: false,
         error: function(jqXHR, textStatus, errorThrown)
         {
