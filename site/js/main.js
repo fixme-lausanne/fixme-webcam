@@ -30,9 +30,9 @@ function showGallery(){
         div.append(img);
     });
     $('body').append(div);
-    $('body').click(function(){
+    $('body').click(function(e){
         $('#galleryContainer').remove();
-        $('body').unbind('click');
+        $('body').unbind(e);
     });
 }
 
@@ -93,7 +93,7 @@ function lastGallery() {
 function fullScreenPicture(img, e){
     img.stop(true, true);
     e.stopPropagation();
-    img.unbind('click');
+    img.unbind(e);
     $.each($('.fullscreen'), function(k, v){
         reducePicture($(v), e);
     });
@@ -120,8 +120,8 @@ function fullScreenPicture(img, e){
 function reducePicture(img, e) {
     img.stop(true, true);
     e.stopPropagation();
-    img.unbind('click');
-    $('body').unbind('click');
+    img.unbind(e);
+    $('body').unbind(e);
     img.removeClass('fullscreen');
     img.css({
         position: 'relative',
