@@ -441,12 +441,14 @@ nav a:hover {
 }
 
 #galleryContainer {
+    border: 5px solid #009100;
+    background-color: black;
     position: absolute;
     overflow-y: scroll;
-    top:15px;
-    bottom:15px;
-    right: 15px;
-    left: 15px;
+    top:50px;
+    bottom:50px;
+    right: 50px;
+    left: 50px;
 }
 
 .fullscreen {
