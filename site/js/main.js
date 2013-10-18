@@ -19,7 +19,7 @@ function main(){
 
 function showGallery(){
     var div = $('<div>');
-    div.addClass('galleryContainer');
+    div.attr('id', 'galleryContainer');
     $.each(gallery, function(k, v){
         var img = $('<img>');
         img.attr('src', v);
@@ -30,6 +30,10 @@ function showGallery(){
         div.append(img);
     });
     $('body').append(div);
+    $('body').click(function(){
+        $('#galleryContainer').remove();
+        $('body').unbind('click');
+    });
 }
 
 function takeScreenshot() {
