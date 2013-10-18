@@ -125,7 +125,7 @@ function reducePicture(img, e) {
     img.removeClass('fullscreen');
     img.css({
         position: 'relative',
-        'z-index': 1,
+        'z-index': 0,
         width: '160px',
         height: '120px',
         margin: '5px 5px 0 0',
