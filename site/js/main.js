@@ -10,10 +10,26 @@ function main(){
         return false;
     });
     $('#gallery').click(function(){
+        showGallery();
         return false;
     });
     buildGallery();
     lastGallery();
+}
+
+function showGallery(){
+    var div = $('<div>');
+    div.addClass('galleryContainer');
+    $.each(gallery, function(k, v){
+        var img = $('<img>');
+        img.attr('src', v);
+        img.attr('class', 'thumb gallery');
+        img.click(function(e){
+            fullScreenPicture(img, e);
+        });
+        div.append(img);
+    });
+    $('body').append(div);
 }
 
 function takeScreenshot() {

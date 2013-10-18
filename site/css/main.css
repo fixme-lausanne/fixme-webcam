@@ -436,6 +436,21 @@ nav a:hover {
     margin: 5px 5px 0 0;
 }
 
+.gallery {
+    margin: 5px;
+}
+
+.galleryContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: auto;
+    top:15px;
+    bottom:15px;
+    right: 15px;
+    left: 15px;
+}
+
 .fullscreen {
     border: 5px solid #009100;
     width: auto!important;
