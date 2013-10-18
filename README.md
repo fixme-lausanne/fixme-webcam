@@ -17,6 +17,6 @@ Site
         Allow from all
         AddHandler cgi-script .py
     </Directory>
-- You still need to do a couple of commands after pushing to live:
+- In the post-receive hook, you need to:
   chmod +x /var/www/webcam/htdocs/screenshot.py
   chmod 770 /var/www/webcam/htdocs/img/snap
